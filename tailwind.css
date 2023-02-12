@@ -18,6 +18,14 @@
   margin-right: 0.5rem
 }
 
+.mr-4 {
+  margin-right: 1rem
+}
+
+.ml-4 {
+  margin-left: 1rem
+}
+
 .block {
   display: block
 }
@@ -72,6 +80,32 @@
 
 .border-b-2 {
   border-bottom-width: 2px
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity))
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.p-5 {
+  padding: 1.25rem
+}
+
+.p-6 {
+  padding: 1.5rem
+}
+
+.p-4 {
+  padding: 1rem
+}
+
+.p-2 {
+  padding: 0.5rem
 }
 
 .py-4 {

@@ -12,7 +12,7 @@ const ChatMessage = ({ Message }: ChatMessageProps) => {
   const tw = useTailwind();
   return (
     <View>
-      <View style={[{ backgroundColor: "#e5e5e5", padding: 5 }]}>
+      <View style={[{ padding: 5 }]}>
         <View
           style={[
             {
@@ -25,12 +25,19 @@ const ChatMessage = ({ Message }: ChatMessageProps) => {
           ]}
         >
           {Message.user.id !== "u1" && (
-            <Text style={[{ color: Colors.light.tint, marginBottom : 5 }, tw("font-bold")]}>
+            <Text
+              style={[
+                { color: Colors.light.tint, marginBottom: 5 },
+                tw("font-bold"),
+              ]}
+            >
               {Message.user.name}
             </Text>
           )}
           <Text>{Message.content}</Text>
-          <Text style={[{alignSelf : "flex-end"}]}>{moment(Message.createdAt).fromNow()}</Text>
+          <Text style={[{ alignSelf: "flex-end" }]}>
+            {moment(Message.createdAt).fromNow()}
+          </Text>
         </View>
       </View>
     </View>
