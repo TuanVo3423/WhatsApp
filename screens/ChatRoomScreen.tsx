@@ -6,7 +6,7 @@ import ChatRoomData from "../datas/Chats";
 import ChatMessage from "../components/ChatMessage";
 import InputChatBox from "../components/InputChatBox";
 import { useTailwind } from "tailwind-rn/dist";
-import  BG  from "../assets/images/BG.png";
+import  BG   from "../assets/images/BG.png";
 
 type ChatRoomScreenRouteProp = RouteProp<RootStackParamList, "ChatRoom">;
 const ChatRoomScreen = () => {
