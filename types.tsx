@@ -24,6 +24,7 @@ export type RootStackParamList = {
     name: string;
   };
   NotFound: undefined;
+  Contact: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
@@ -44,7 +45,8 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
 export type User = {
   id: string;
   name: string;
-  imageUrl?: string;
+  imageUri?: string;
+  status?: string;
 };
 export type Message = {
   id: string;

@@ -30,6 +30,7 @@ import {
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 import ChatRoomScreen from "../screens/ChatRoomScreen";
+import ContactScreen from "../screens/ContactScreen";
 
 export default function Navigation({
   colorScheme,
@@ -97,7 +98,12 @@ function RootNavigator() {
           title: route.params.name,
           headerRight: () => {
             return (
-              <View style={[tw("flex-row justify-between"),{width : 100, marginRight : 10}]}>
+              <View
+                style={[
+                  tw("flex-row justify-between"),
+                  { width: 100, marginRight: 10 },
+                ]}
+              >
                 <MaterialIcons name="call" size={22} color={"white"} />
                 <FontAwesome5 name="video" size={22} color={"white"} />
                 <MaterialCommunityIcons
@@ -112,6 +118,9 @@ function RootNavigator() {
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
+      </Stack.Group>
+      <Stack.Group>
+        <Stack.Screen name="Contact" component={ContactScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -148,9 +157,6 @@ function MainTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: "Camera",
-          tabBarContentContainerStyle: {
-            width: 10,
-          },
           tabBarIcon: () => {
             return (
               <Fontisto
@@ -173,9 +179,3 @@ function MainTabNavigator() {
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>["name"];
-  color: string;
-}) {
-  return <FontAwesome size={20} style={{ marginBottom: -3 }} {...props} />;
-}
